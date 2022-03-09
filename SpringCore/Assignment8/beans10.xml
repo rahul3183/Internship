@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="contextAware" class="com.capgemini.springAssignment.Q10.ContextAwareExample">
+        <property name="place" value="Delhi"/>
+        <property name="demo" ref="Demo"/>
+    </bean>
+    <bean id="contextAware" class="com.spring10.ContextAwareExample">
+        <property name="place" value="Mumbai"/>
+        <property name="demo" ref="data"/>
+    </bean>
+
+    <bean id="data" class="com.spring10.Data" scope="prototype">
+        <property name="x" value="10"/>
+        <property name="y" value="20"/>
+    </bean>
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+     <bean id="emp" class="com.spring8.Employee" >
+        <property name="name" value="Rahul"/>
+    </bean>
+
+    <!-- using init-method and destroy-method -->
+    <bean id="emp1" class="com.spring8.Employee" init-method="myInit" destroy-method="myDest">
+        <property name="name" value="Kunal"/>
+    </bean>
+
+    <!-- Using postConstruct and preDestroy Annontations -->
+    <bean id="emp2" class="com.spring8.Employee">
+        <property name="name" value="Amit"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Question" class="com.spring2.Questions">
+        <property name="question" value="Name Some Fruits"/>
+        <property name="answers">
+            <list>
+                <value>Apple</value>
+                <value>Mango</value>
+                <value>Grapes</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="Question1" class="com.spring2.Questions">
+        <property name="question" value="Name Some Fruits"/>
+        <property name="answersSet">
+            <set>
+                 <value>Apple</value>
+                <value>Mango</value>
+                <value>Grapes</value>
+            </set>
+        </property>
+    </bean>
+    
+    <bean id="Question2" class="com.spring2.Questions">
+        <property name="question" value="Name Some Fruits"/>
+        <property name="answersMap">
+            <map>
+                <entry key="1" value="Apple"/>
+                <entry key="2" value="Mango"/>
+                <entry key="3" value="Grapes"/>
+            </map>
+        </property>
+    </bean>
+
+    </beans>
